@@ -6,10 +6,13 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 .container {
   max-width: 80%;
   margin: 0 auto;
-  margin: auto;
 }
 .hero-section .flex-container {
   display: flex;
@@ -229,7 +232,6 @@ a , button {
 .card2-details p {
   margin: 10px 0;
 }
-/* media queries for breakpoints */
 @media only screen and (min-width: 768px) {
   .flex-item {
     width: 50%;
@@ -277,7 +279,6 @@ a , button {
     justify-content: center;
     height: 100vh;
   }
-
   .select-btn-container .flex-item {
     width: 33.3333%;
   }
@@ -298,7 +299,6 @@ a , button {
     padding: 15px 20px;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1000px;
