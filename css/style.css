@@ -8,25 +8,135 @@ body {
 }
 .container {
   max-width: 80%;
+  margin: 0 auto;
 }
-.flex-container {
+.hero-section .flex-container {
   display: flex;
+  flex-wrap: wrap;
+  height: 100%;
 }
 .flex-item {
   width: 100%;
 }
-
+.hero-section {
+  background: #000;
+  color: #fff;
+  height: 95vh;
+  border-radius: 8px;
+}
+.banner-left {
+  padding: 10px;
+  text-align: center;
+  margin-top: 15px;
+}
+.banner-btn {
+  width: 140px;
+  height: 40px;
+  background: crimson;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 35px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px;
+  outline: none;
+  transition: 0.5s;
+}
+.banner-btn:hover {
+  background: rgba(43, 42, 42, 0.849);
+}
+.btn-arrow i {
+  transition: 0.5s;
+}
+.banner-btn:hover .btn-arrow i {
+  transform: translateX(5px);
+}
+.banner-left p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 0;
+}
+.banner-right {
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+}
+.banner-img img {
+  width: 250px;
+  margin-bottom: -4px;
+  overflow: hidden;
+}
 @media only screen and (min-width: 768px) {
   .flex-item {
     width: 50%;
   }
+  .hero-section .flex-container {
+    height: 100%;
+    flex-wrap: nowrap;
+  }
+  .hero-section {
+    height: 70vh;
+    border-radius: 20px;
+  }
+  .banner-left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+  }
+  .banner-left h1 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .banner-left p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 0;
+  }
+  .banner-img img {
+    width: 280px;
+  }
+  .hero-section {
+    display: flex;
+    align-items: center;
+    padding: 0px 25px;
+  }
+  .banner-btn {
+    padding: 0;
+  }
+  .banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
 }
-@media only screen and (min-width: 1024px) {
-  /*Big smartphones [426px -> 600px]*/
+@media only screen and (min-width: 1200px) {
   .container {
-    max-width: 900px;
+    max-width: 1000px;
   }
   .flex-item {
     width: 33.3333%;
+  }
+  .hero-section .hero-section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+  }
+  .banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .banner-img img {
+    width: 400px;
   }
 }
