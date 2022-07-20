@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  max-width: 90%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -31,7 +31,7 @@ body {
 .hero-section {
   background: #000;
   color: #fff;
-  height: 65vh;
+  height: 680px;
   border-radius: 8px;
 }
 
@@ -80,7 +80,6 @@ body {
   line-height: 40px;
   outline: none;
   transition: 0.5s;
-  margin-top: 20px;
   display: inline-block;
 }
 
@@ -98,6 +97,7 @@ body {
 
 .banner-left {
   padding:  0 55px;
+  padding-top: 20px;
 }
 
 .banner-left p {
@@ -110,6 +110,8 @@ body {
   margin: 0 auto;
   display: flex;
   align-items: flex-end;
+  width: 50%;
+  justify-content: center;
 }
 .banner-img img {
   width: 250px;
@@ -245,6 +247,10 @@ a , button {
 
 .card2-container {
   width: 100%;
+  border: 1px solid rgba(160, 159, 159, 0.445);
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: content-box;
 }
 
 .card2-top {
@@ -255,7 +261,7 @@ a , button {
 }
 
 .card2-top img {
-  width: 90px;
+  width: 100px;
   height: 100%;
 }
 
@@ -293,6 +299,19 @@ a , button {
   text-align: center;
   color: #fff;
   padding: 30px 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .banner-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .banner-left .banner-btn {
+    width: fit-content;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -335,13 +354,14 @@ a , button {
   }
 
   .banner-img img {
-    width: 300px;
+    width: 345px;
   }
 
   .hero-section {
     display: flex;
     align-items: center;
     padding: 0px 25px;
+    justify-content: center;
   }
 
   .banner-btn {
@@ -375,10 +395,14 @@ a , button {
   .footer-menu a {
     padding: 15px 20px;
   }
+
+  .card2-top img {
+    width: 90px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .container {
-    max-width: 1000px;
+    width: 80%;
   }
   .flex-item {
     width: 33.3333%;
@@ -396,12 +420,9 @@ a , button {
     justify-content: center;
   }
 
-  .banner-img img {
-    width: 400px;
-  }
-  
   .section-main {
     display: flex;
+    justify-content: center;
   }
 
   .select-btn-container {
@@ -451,8 +472,13 @@ a , button {
     background: linear-gradient(45deg, rgba(252,0,22,1) 0%, rgba(213,16,230,1) 100%);
   }
 
+  .card2-top img {
+    width: 70px;
+  }
+
   .footer-section {
     padding: 50px;
+    margin-top: 30px;
   }
 
   .footer-section hr {
